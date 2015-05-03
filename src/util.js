@@ -1,5 +1,15 @@
 'use strict';
 
+/**
+ * Quick & dirty ie8 support for custom directives
+ */
+tagsInput.run(['$sniffer', function($sniffer) {
+    if ($sniffer.msie && $sniffer.msie <= 8) {
+        document.createElement('tags-input');
+        document.createElement('auto-complete');
+    }
+}]);
+
 /***
  * @ngdoc factory
  * @name tiUtil
