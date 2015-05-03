@@ -254,7 +254,13 @@ tagsInput.directive('autoComplete', function($document, $timeout, $sce, $q, tags
 
                     if (handled) {
                         event.preventDefault();
-                        event.stopImmediatePropagation();
+                        if (event.stopImmediatePropagation) {
+                            event.stopImmediatePropagation();
+                        } else {
+                            // I'm not sure, but it seems to work in ie8
+                            // Alternatively, try https://github.com/WebReflection/ie8
+                            event.cancelBubble = true;
+                        }
                         return false;
                     }
                 });
