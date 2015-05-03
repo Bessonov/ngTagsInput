@@ -4,7 +4,7 @@
       <li class="tag-item"
           ng-repeat="tag in tagList.items track by track(tag)"
           ng-class="{ selected: tag == tagList.selected }">
-        <ti-tag-item data="tag"></ti-tag-item>
+        <span ti-tag-item data="tag"></span>
       </li>
     </ul>
     <input class="input"

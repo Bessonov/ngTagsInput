@@ -51,11 +51,11 @@ describe('tags-input directive', function() {
     }
 
     function getTagText(index) {
-        return getTag(index).find('ti-tag-item > ng-include > span').html();
+        return getTag(index).find('[ti-tag-item] > [ng-include] > span').html();
     }
 
     function getRemoveButton(index) {
-        return getTag(index).find('ti-tag-item > ng-include > a').first();
+        return getTag(index).find('[ti-tag-item] > [ng-include] > a').first();
     }
 
     function getInput() {
@@ -1502,7 +1502,7 @@ describe('tags-input directive', function() {
 
         function getTagContent(index) {
             return getTag(index)
-                .find('ti-tag-item > ng-include')
+                .find('[ti-tag-item] > [ng-include]')
                 .children()
                 .removeAttr('class')
                 .parent()
@@ -1511,7 +1511,7 @@ describe('tags-input directive', function() {
 
         function getTagScope(index) {
             return getTag(index)
-                .find('ti-tag-item > ng-include')
+                .find('[ti-tag-item] > [ng-include]')
                 .children()
                 .scope();
         }
