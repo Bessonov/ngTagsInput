@@ -1,3 +1,10 @@
+# About this (throw-away) fork
+
+It's based on v2.3.0 tag and was created for basic ie8 support. Angular 1.2.x is required, because Angular 1.3 drops ie8 support. My changes may or may not to work.
+
+## Installing
+- Bower (`bower install Bessonov/ngTagsInput.ie8-bower --save`)
+
 # ngTagsInput 
 
 [![Travis](https://img.shields.io/travis/mbenford/ngTagsInput.svg?style=flat)](https://travis-ci.org/mbenford/ngTagsInput)
