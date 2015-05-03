@@ -10,9 +10,9 @@
  */
 tagsInput.directive('tiAutocompleteMatch', function($sce, tiUtil) {
     return {
-        restrict: 'E',
+        restrict: 'A',
         require: '^autoComplete',
-        template: '<ng-include src="$$template"></ng-include>',
+        template: '<span ng-include="$$template"></span>',
         scope: { data: '=' },
         link: function(scope, element, attrs, autoCompleteCtrl) {
             var autoComplete = autoCompleteCtrl.registerAutocompleteMatch(),

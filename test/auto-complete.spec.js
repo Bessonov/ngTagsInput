@@ -94,7 +94,7 @@ describe('autoComplete directive', function() {
     }
 
     function getSuggestionText(index) {
-        return getSuggestion(index).find('ti-autocomplete-match > ng-include > span').html();
+        return getSuggestion(index).find('[ti-autocomplete-match] > [ng-include] > span').html();
     }
 
     function isSuggestionsBoxVisible() {
@@ -1223,7 +1223,7 @@ describe('autoComplete directive', function() {
 
         function getSuggestionContent(index) {
             return getSuggestion(index)
-                .find('ti-autocomplete-match > ng-include')
+                .find('[ti-autocomplete-match] > [ng-include]')
                 .children()
                 .removeAttr('class')
                 .parent()
@@ -1232,7 +1232,7 @@ describe('autoComplete directive', function() {
 
         function getSuggestionScope(index) {
             return getSuggestion(index)
-                .find('ti-autocomplete-match > ng-include')
+                .find('[ti-autocomplete-match] > [ng-include]')
                 .children()
                 .scope();
         }
